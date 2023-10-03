@@ -1,7 +1,19 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/app.module';
+import { createCustomElement } from '@angular/elements';
+import { createApplication } from '@angular/platform-browser';
+import { APHButtonComponent } from './app/aphbutton/aphbutton.component';
 
+(async () => {
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+  const app = await createApplication({
+    providers: [
+    ],
+  });
+
+  const buttonElement = createCustomElement(APHButtonComponent, {
+    injector: app.injector,
+  });
+
+  customElements.define('aph-button', buttonElement);
+
+})();
