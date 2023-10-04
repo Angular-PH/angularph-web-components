@@ -3,7 +3,7 @@ import { createCustomElement } from '@angular/elements';
 import { createApplication } from '@angular/platform-browser';
 import { APHButtonComponent } from './app/aphbutton/aphbutton.component';
 import { APHInputComponent } from './app/controls/aphinput/aphinput.component';
-import { APHBreadcrumbComponent } from './app/breadcrumb/breadcrumb.component';
+import { APHBreadcrumbComponent } from './app/aphbreadcrumb/aphbreadcrumb.component';
 
 (async () => {
 
