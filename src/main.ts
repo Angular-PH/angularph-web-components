@@ -3,6 +3,7 @@ import { createCustomElement } from '@angular/elements';
 import { createApplication } from '@angular/platform-browser';
 import { APHButtonComponent } from './app/aphbutton/aphbutton.component';
 import { APHInputComponent } from './app/controls/aphinput/aphinput.component';
+import { APHBreadcrumbComponent } from './app/breadcrumb/breadcrumb.component';
 
 (async () => {
 
@@ -17,7 +18,11 @@ import { APHInputComponent } from './app/controls/aphinput/aphinput.component';
   const inputElement = createCustomElement(APHInputComponent, {
     injector: app.injector
   });
+  const breadcrumbElement = createCustomElement(APHBreadcrumbComponent, {
+    injector: app.injector
+  });
 
   customElements.define('aph-button', buttonElement);
   customElements.define('aph-input', inputElement);
+  customElements.define('aph-breadcrumb', breadcrumbElement);
 })();
