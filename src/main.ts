@@ -3,6 +3,7 @@ import { createCustomElement } from '@angular/elements';
 import { createApplication } from '@angular/platform-browser';
 import { APHButtonComponent } from './app/aphbutton/aphbutton.component';
 import { APHInputComponent } from './app/controls/aphinput/aphinput.component';
+import { APHBreadcrumbComponent } from './app/aphbreadcrumb/aphbreadcrumb.component';
 import { APHCheckboxComponent } from './app/controls/aphcheckbox/aphcheckbox.component';
 import { APHCountrySelectComponent } from './app/controls/aphcountry-select/aphcountry-select.component';
 import { APHPhoneInputComponent } from './app/controls/aphphone-input/aphphone-input.component';
@@ -17,6 +18,7 @@ import { APHSkeletonComponent } from './app/loaders/aphskeleton/aphskeleton.comp
     ],
   });
 
+
   const components = [
     { name: 'aph-button', component: APHButtonComponent },
     { name: 'aph-input', component: APHInputComponent },
@@ -26,6 +28,7 @@ import { APHSkeletonComponent } from './app/loaders/aphskeleton/aphskeleton.comp
     { name: 'aph-radio', component: APHRadioComponent },
     { name: 'aph-search-dropdown', component: APHSearchDropdownComponent },
     { name: 'aph-skeleton', component: APHSkeletonComponent },
+    { name: 'aph-breadcrumb', component: APHBreadcrumbComponent },
   ]
   for (let item of components) {
     const element = createCustomElement(item.component, {
