@@ -10,6 +10,8 @@ import { APHPhoneInputComponent } from './app/controls/aphphone-input/aphphone-i
 import { APHRadioComponent } from './app/controls/aphradio/aphradio.component';
 import { APHSearchDropdownComponent } from './app/controls/aphsearch-dropdown/aphsearch-dropdown.component';
 import { APHSkeletonComponent } from './app/loaders/aphskeleton/aphskeleton.component';
+import { APHModalComponent } from './app/aphmodal/aphmodal.component';
+import { APHProgressBarComponent } from './app/loaders/aphprogress-bar/aphprogress-bar.component';
 
 (async () => {
 
@@ -29,7 +31,9 @@ import { APHSkeletonComponent } from './app/loaders/aphskeleton/aphskeleton.comp
     { name: 'aph-search-dropdown', component: APHSearchDropdownComponent },
     { name: 'aph-skeleton', component: APHSkeletonComponent },
     { name: 'aph-breadcrumb', component: APHBreadcrumbComponent },
-  ]
+    { name: 'aph-modal', component: APHModalComponent },
+    { name: 'aph-progress-bar', component: APHProgressBarComponent }
+  ];
   for (let item of components) {
     const element = createCustomElement(item.component, {
       injector: app.injector
